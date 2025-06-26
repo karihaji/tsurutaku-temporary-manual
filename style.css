@@ -1,8 +1,26 @@
 body {
+  position: relative;
+  background: #ffe04c;
   font-family: sans-serif;
-  background: #f9f9f9;
   color: #222;
-  margin: 2em;
+  margin: 0;
+  padding: 0;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  max-width: 500px;
+  min-width: 180px;
+  height: auto;
+  aspect-ratio: 1/1;
+  background: url('images/tsurutaku_logo_transparent.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.10;
+  pointer-events: none;
+  z-index: 0;
 }
 h1 {
   color: #007acc;
