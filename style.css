@@ -1,6 +1,6 @@
 body {
   position: relative;
-  background: #ffe04c;
+  background: #faf8e3;
   font-family: sans-serif;
   color: #222;
   margin: 0;
@@ -18,7 +18,7 @@ body::before {
   aspect-ratio: 1/1;
   background: url('images/tsurutaxi.png') no-repeat center center;
   background-size: contain;
-  opacity: 0.28;
+  opacity: 0.6;
   pointer-events: none;
   z-index: 0;
 }
