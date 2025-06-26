@@ -13,7 +13,48 @@
     <li>利用可能タクシー: 鶴丸交通株式会社（市丸グループ）</li>
     <li>総配布枚数：270枚（それぞれ番号記載あり）</li>
   </ul>
-  <img src="images/乗車券サンプル表.png" alt="タクシー乗車券サンプル表" style="max-width:400px; height:auto;">
+  <div class="image-row nowrap">
+    <img src="images/乗車券サンプル表.png" alt="乗車券サンプル表" class="side-image zoomable" onclick="openModal(this)">
+    <img src="images/乗車券サンプル裏.png" alt="乗車券サンプル裏" class="side-image zoomable" onclick="openModal(this)">
+  </div>
+  <br>
+  <p style="color: #666; font-size: 0.9em;">※画像はサンプルです</p>
+  <br>
   <a href="index.html">トップページに戻る</a>
+  <hr>
+  <div class="menu">
+    <h3>メニュー</h3>
+    <ul>
+      <li><a href="chapter1.html">第1章：タクシー乗車券の概要</a></li>
+      <li><a href="chapter2.html">第2章：お客様対応と精算手順</a></li>
+      <li><a href="chapter3.html">第3章：乗車券利用時の注意事項</a></li>
+      <li><a href="chapter4.html">第4章：日報およびチケット裏面への記載方法</a></li>
+      <li><a href="notes.html">備考（シナリオ例・不明点）</a></li>
+    </ul>
+    <div class="pdf-download">
+      <strong>PDF版ダウンロード：</strong>
+      <a href="pdfs/乗務員様向けマニュアル.pdf" download>乗務員様向けマニュアル（PDF）</a>
+    </div>
+  </div>
+
+  <!-- モーダル本体（共通ルール） -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">×</span>
+    <img class="modal-content" id="modalImg">
+    <div id="modalCaption"></div>
+  </div>
+  <script>
+  function openModal(img) {
+    var modal = document.getElementById('imgModal');
+    var modalImg = document.getElementById('modalImg');
+    var caption = document.getElementById('modalCaption');
+    modal.classList.add('show');
+    modalImg.src = img.src;
+    caption.innerText = img.alt;
+  }
+  function closeModal() {
+    document.getElementById('imgModal').classList.remove('show');
+  }
+  </script>
 </body>
 </html> 

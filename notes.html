@@ -15,8 +15,31 @@
     <li>日報記載: 現金収入: 0円 未収: 1,800円 予約回数: +1</li>
     <li>チケット番号: 利用したチケットの番号(281,282)を記入</li>
   </ul>
-  <img src="images/乗務員記録簿記入例.png" alt="乗務員記録簿記入例" style="max-width:500px; height:auto;">
-  <img src="images/裏面記入例.png" alt="チケット裏面記入例" style="max-width:400px; height:auto;">
+  <img src="images/乗務員記録簿記入例.png" alt="乗務員記録簿記入例" class="main-image zoomable" onclick="openModal(this)">
+  <div class="image-row nowrap">
+    <img src="images/裏面記入例2.png" alt="裏面記入例2" class="side-image zoomable" onclick="openModal(this)">
+    <img src="images/裏面記入例.png" alt="裏面記入例" class="side-image zoomable" onclick="openModal(this)">
+  </div>
+  <br>
+  <!-- モーダル本体 -->
+  <div id="imgModal" class="modal" onclick="closeModal()">
+    <span class="modal-close" onclick="closeModal()">×</span>
+    <img class="modal-content" id="modalImg">
+    <div id="modalCaption"></div>
+  </div>
+  <script>
+  function openModal(img) {
+    var modal = document.getElementById('imgModal');
+    var modalImg = document.getElementById('modalImg');
+    var caption = document.getElementById('modalCaption');
+    modal.classList.add('show');
+    modalImg.src = img.src;
+    caption.innerText = img.alt;
+  }
+  function closeModal() {
+    document.getElementById('imgModal').classList.remove('show');
+  }
+  </script>
   <h3>シナリオ2: 通常乗車でチケット1枚と現金の併用</h3>
   <ul>
     <li>状況: 通常乗車。運賃1,100円。</li>
@@ -24,7 +47,6 @@
     <li>日報記載: 現金収入: 100円 未収: 1,000円</li>
     <li>チケット番号: 利用したチケットの番号を記入</li>
   </ul>
-  <img src="images/裏面記入例2.png" alt="チケット裏面記入例2" style="max-width:400px; height:auto;">
   <h3>シナリオ3: 通常乗車でチケット1枚のみ利用（お釣りなし）</h3>
   <ul>
     <li>状況: 通常乗車。運賃800円。</li>
@@ -35,8 +57,22 @@
   <hr>
   <h2>不明点が生じた場合</h2>
   <p>上記マニュアルの内容で判断に迷う場合や、お客様との間で問題が生じる場合は、速やかに配車センター（099-223-3131）等へ連絡し、指示を仰いでください。</p>
-  <img src="images/乗車券サンプル表.png" alt="タクシー乗車券サンプル表" style="max-width:400px; height:auto;">
-  <img src="images/乗車券サンプル裏.png" alt="タクシー乗車券サンプル裏" style="max-width:400px; height:auto;">
+  <br>
   <a href="index.html">トップページに戻る</a>
+  <hr>
+  <div class="menu">
+    <h3>メニュー</h3>
+    <ul>
+      <li><a href="chapter1.html">第1章：タクシー乗車券の概要</a></li>
+      <li><a href="chapter2.html">第2章：お客様対応と精算手順</a></li>
+      <li><a href="chapter3.html">第3章：乗車券利用時の注意事項</a></li>
+      <li><a href="chapter4.html">第4章：日報およびチケット裏面への記載方法</a></li>
+      <li><a href="notes.html">備考（シナリオ例・不明点）</a></li>
+    </ul>
+    <div class="pdf-download">
+      <strong>PDF版ダウンロード：</strong>
+      <a href="pdfs/乗務員様向けマニュアル.pdf" download>乗務員様向けマニュアル（PDF）</a>
+    </div>
+  </div>
 </body>
 </html> 
